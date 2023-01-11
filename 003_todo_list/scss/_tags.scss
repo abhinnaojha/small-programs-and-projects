@@ -1,0 +1,64 @@
+body
+{
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+input
+{
+  box-sizing: border-box;
+
+  width: 60vw;
+  height: 40px;
+
+  font-size: 18px;
+
+  padding-left: 10px;
+
+  border-width: 3px;
+  border-color: darkblue;
+  border-style: solid;
+  border-radius: 5px  ;
+
+  outline-width: 3px;
+  outline-color: cyan;
+}
+button
+{
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  width: 200px;
+  height: 40px;
+
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: orange;
+
+
+  background-image: linear-gradient(to bottom, blue 0%, darkblue 20%);
+  background-repeat: repeat-y;
+  background-size: auto 80px;
+  background-position-y: 0px;
+
+  font-family: Helvetica, monospace;
+  font-size: 22px;
+
+  color: orange;
+
+  transition-property: background-position, border-color, color;
+  transition-delay: 30ms;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover
+  {
+    background-position-y: -40px;
+    border-color: goldenrod;
+    color: gold;
+  }
+}

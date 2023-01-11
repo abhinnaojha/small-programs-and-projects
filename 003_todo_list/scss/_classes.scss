@@ -1,0 +1,22 @@
+.flex
+{
+  display: flex;
+
+  &-centre
+  {
+    margin: auto;
+  }
+  &-vertical
+  {
+    flex-direction: column;
+  }
+  &-align-center
+  {
+    justify-content: space-around;
+  }
+}
+
+.border
+{
+  border: 3px solid darkblue;
+}

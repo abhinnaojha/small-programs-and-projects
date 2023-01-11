@@ -1,0 +1,157 @@
+.main
+{
+  width: 60vw;
+
+  margin-top: 50px;
+}
+.list
+{
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  justify-content: space-between;
+
+  height: 40px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+
+  font-size: 18px;
+  font-family: Helvetica, monospace;
+
+  border-radius: 3px;
+
+  &-active
+  {
+    background-color: lightgreen;
+  }
+  &-inactive
+  {
+    background-color: lightpink;
+    color: dimgray;
+
+    .checkbox
+    {
+      background-color: dimgray;
+      border-color: dimgray;
+
+      &::before
+      {
+        content: "";
+      }
+      &::after
+      {
+        color: white;
+        font-size: 20px;
+        content: "✓";
+      }
+    }
+
+    .todo_text
+    {
+      text-decoration: line-through;
+    }
+  }
+
+  &:hover
+  {
+    .checkbox
+    {
+      background-color: darkblue;
+
+      &::before
+      {
+        content: "";
+      }
+      &::after
+      {
+        color: white;
+        font-size: 20px;
+        content: "✓";
+      }
+    }
+  }
+
+}
+
+.checkbox, .check-del
+{
+  box-sizing: border-box;
+
+  margin: auto 5px;
+
+  width: 30px;
+  height: 30px;
+
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: darkblue;
+  border-style: solid;
+
+  text-align: center;
+  vertical-align: middle;
+}
+.check-del
+{
+  background-color: dimgray;
+  border-color: dimgray;
+  &::before
+  {
+    content: "";
+  }
+  &::after
+  {
+    color: white;
+    font-size: 20px;
+    content: "✓";
+  }
+}
+
+.todo_text
+{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.delete
+{
+  justify-content: space-between;
+  &-active
+  {
+    display: inline;
+
+    box-sizing: border-box;
+
+    margin: auto 5px;
+
+    padding-bottom: 5px;
+    padding-left: 7px;
+
+    width: 30px;
+    height: 30px;
+
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: crimson;
+    border-style: solid;
+
+    color: crimson;
+    font-size: 20px;
+
+    &:hover
+    {
+      color: lightpink;
+      background-color: crimson;
+    }
+  }
+  &-inactive
+  {
+    display: none;
+  }
+}
+#display
+{
+  margin-top: 50px;
+
+  width: 60vw;
+}

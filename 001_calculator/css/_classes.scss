@@ -1,0 +1,169 @@
+$primary_background-color : maroon;
+$primary_background-color_hover : brown;
+$primary_color : white;
+$operation_background-color : darkgoldenrod;
+$operation_background-color_hover : goldenrod;
+$operation_color : black;
+$number_background-color : bisque;
+$number_background-color_hover : burlywood;
+$number_color : black;
+
+@font-face
+{
+  font-family: digital-dream;
+  src: url('../fonts/DIGITALDREAM.ttf') format('truetype');
+}
+.hidden
+{
+  display: none;
+}
+.fixed
+{
+  position: fixed;
+}
+.flex
+{
+  display: flex;
+
+  &-direction
+  {
+    &-vertical
+    {
+      flex-direction: column;
+    }
+  }
+  &-centre
+  {
+    margin: auto;
+  }
+}
+//main division of the calculator
+.main
+{
+  width: 25vw;
+}
+
+//main screen of the calculator
+//expression display + result display
+.screen
+{
+  border: solid black;
+  border-radius: 1vw;
+
+  margin: 1vw;
+  padding: 1vw;
+}
+// the two display screens to display the expression and the result
+.display
+{
+  text-align: right;
+  overflow-x: auto;
+  overflow-y: hidden;
+  //expression display, top one
+  &-expression
+  {
+    flex-basis: 3vw;
+    font-size: 1.25em;
+  }
+  //result display, bottom one
+  &-result
+  {
+    flex-basis: 4vw;
+    margin-top: 1vw;
+    font-family: digital-dream, monospace;
+    font-size: 1.5em;
+  }
+}
+//buttons used in the calculator
+button
+{
+  box-sizing: border-box;
+
+  margin: 0.5vw auto;
+  padding: 0.5vw;
+
+  width: 5vw;
+  height: 5vw;
+
+  border-radius: 100vw;
+
+  cursor: pointer;
+
+  font-size: 1.5em;
+  font-family: monospace;
+  // = is longer than others so.
+  &.long
+  {
+    width: 11vw;
+  }
+}
+// primary buttons: AC and CE
+.primary
+{
+  background-color: $primary_background-color;
+  color: $primary_color;
+  &:hover, &-hover
+  {
+    background-color: $primary_background-color_hover;
+  }
+}
+//operation buttons: x, /, +, -, %, and =
+.operation, .equal
+{
+  background-color: $operation_background-color;
+  color: $operation_color;
+  &:hover, &-hover
+  {
+    background-color: $operation_background-color_hover;
+  }
+}
+//number buttons and dots
+.number, .dot
+{
+  background-color: $number_background-color;
+  color: $number_color;
+  &:hover, &-hover
+  {
+    background-color: $number_background-color_hover;
+  }
+}
+//details about keyboard
+.detail
+{
+  transform-origin: 50%;
+  transform: translateX(- 50%);
+  left: 50vw;
+  margin: auto;
+  font-family: monospace;
+  &-icon
+  {
+    top: 0.6vw;
+
+    height: 1vw;
+    width: 1vw;
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 0.5vw;
+
+    cursor: pointer;
+
+    border: 0.125vw solid black;
+    border-radius: 50%;
+
+    background-color: white;
+  }
+  &-description
+  {
+    top: 3vw;
+
+    border-radius: 0.5vw;
+
+    padding: 0.5vw;
+
+    background-color: white;
+
+    border: 0.125vw solid black;
+  }
+}
