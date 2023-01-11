@@ -1,2 +1,2 @@
-# small-programs-and-projects
+# Small programs and projects
 Small, to-the-point programs and projects.
